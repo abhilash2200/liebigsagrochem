@@ -121,9 +121,9 @@ export default function InformationTabs() {
 
       {/* Single Column Content */}
       {loadingComments ? (
-        <div className="flex flex-col gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-8 max-w-7xl mx-auto">
           {[1, 2].map((i) => (
-            <div key={i} className="bg-gray-50/50 p-10 rounded-[32px] border border-gray-100 space-y-6 animate-pulse">
+            <div key={i} className="bg-gray-50/50 p-10 rounded-[20px] border border-gray-100 space-y-6 animate-pulse">
               <div className="h-12 w-12 bg-gray-200 rounded-2xl" />
               <div className="space-y-3">
                 <div className="h-4 w-full bg-gray-200 rounded-full" />
@@ -134,11 +134,11 @@ export default function InformationTabs() {
           ))}
         </div>
       ) : comments.length > 0 ? (
-        <div className="flex flex-col gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-8 max-w-7xl mx-auto">
           {comments.map((comment, index) => (
             <div 
               key={comment.id || index} 
-              className="group relative bg-white p-10 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-xl hover:border-agro-green-dark/10 transition-all duration-500"
+              className="group relative bg-white p-10 rounded-[20px] border border-gray-100 shadow-sm hover:shadow-xl hover:border-agro-green-dark/10 transition-all duration-500"
             >
               <div className="mb-6 h-12 w-12 rounded-2xl bg-agro-green-dark/10 flex items-center justify-center text-agro-green-dark group-hover:scale-110 group-hover:bg-agro-green-dark group-hover:text-white transition-all duration-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -158,7 +158,7 @@ export default function InformationTabs() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-24 bg-gray-50/50 rounded-[40px] border border-dashed border-gray-200">
+        <div className="text-center py-24 bg-gray-50/50 rounded-[20px] border border-dashed border-gray-200">
           <p className="text-gray-400 font-medium">No details found for this category.</p>
         </div>
       )}
